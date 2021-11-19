@@ -7,9 +7,9 @@ const port = process.env.PORT || 5000;
 // middleware
 app.use(cors());
 app.use(express.json());
-const ObjectId = require('mongodb').ObjectId;
 const uri = `mongodb+srv://talukdertravels:${process.env.DB_PASS}@cluster0.mugj8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const ObjectId = require('mongodb').ObjectId;
 console.log(uri)
 async function run(){
     try {
